@@ -108,6 +108,7 @@ class Finding {
     public function __construct($appID) {
         $this->appID = $appID;        
     }
+    
 
     /**
      * Ebay Finding API
@@ -1399,5 +1400,11 @@ class Finding {
         curl_close($ch);
         $this->results = $response;
         return TRUE;
+    }
+    /**
+     *  Sets the GlobalId 
+     */
+    public function setGlobalId($globalId) {
+        $this->global_id = $globalId;
     }
 }
